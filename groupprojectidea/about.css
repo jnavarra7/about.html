@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: HelveticaNow;
+    src: url(HelveticaNowDisplayXBlk.otf);
+}
+
+@font-face {
+    font-family: apfel;
+    src: url(ApfelGrotezk-Regular.otf);
+}
+
+.wrap{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    font-family: apfel, Arial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 7vh;
+    backdrop-filter:blur(15px);
+    position: fixed;
+    z-index: 2;
+    border-bottom: 0.6px solid black;
+}
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header li{
+    list-style: none;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(10%);
+    }
+}
+
+.topmiddle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+
+.logo{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    height: 8vh;
+    padding-top: 1vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+   
+}
+
+.nav{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.nav li:hover{
+    text-shadow: rgb(161, 8, 34) 1px 0 20px;
+}
+
+.navcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.header .menuitems{
+    display: flex;
+    z-index: 999;
+}
+
+.menuitems{
+    padding-top: 120px;
+    background-color: rgb(250, 250, 250);
+    height: 100vh;
+    width: 50vw;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    z-index: -1;
+}
+
+.aboutsc{
+    width: 100vw;
+    background-image: url(yellow.png);
+    margin-top: 7.2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6vh;
+}
+
+.title{
+    font-family: HelveticaNow, Arial, Helvetica, sans-serif;
+    margin-top: 9vh;
+    margin-left: 8vh;
+    font-size: 4vh;
+    margin-right: 8vh;
+    width: 100%;
+}
+
+.description{
+    margin-right: 8vh;
+    margin-left: 8vh;
+    width: 90vw;
+    text-transform: uppercase;
+    font-family: apfel, Arial;
+}
+
+.bottom{
+    width: 90%;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.title2{
+    font-family: HelveticaNow, Arial, Helvetica, sans-serif;
+    margin-top: 9vh;
+    font-size: 4vh;
+    margin-right: 8vh;
+    width: 100%;
+}
+
+.profile{
+    font-family: apfel, Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    width: 40vw;
+    height: 50vh;
+    border: black .6px solid;
+}
+
+.role{
+    text-align: left;
+    width: 100%;
+    margin-left: 1vh;
+}
+.pfp{
+    width: 20vh;
+}
+
+.skills{
+    width: 100%;
+    margin-left:1vh;
+    text-align: left;
+}
+
+
+
+.indent{
+    margin-left: 1vh;
+}
+
+
+@media screen and (max-width:2000px) {
+    .bottom{
+        width: 90%;
+    }
+    .header{
+        width: 100vw;
+    }
+    .row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pfp{
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .profile{
+        width: 30%;
+        height: 70vh;
+        margin-bottom: 1vh;
+        font-size: 3vh;
+    }
+
+    .role{
+        width: 70%;
+    }
+
+    .skills{
+        width: 70%;
+    }
+    
+}
+
+
+@media screen and (max-width:1000px) {
+    .bottom{
+        width: 90%;
+    }
+    .description{
+        width: 90&;
+    }
+    .row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .pfp{
+        height: 30vh;
+        width: 40vw;
+        object-fit: contain;
+    }
+
+    .profile{
+        width: 97vw;
+        height: 60vh;
+        margin-bottom: 1vh;
+        font-size: 3vh;
+    }
+
+    .role{
+        width: 80%;
+    }
+
+    .skills{
+        width: 80%;
+    }
+    
+}
+
+
+
+/* @media screen and (max-width:1100px) {
+    .pfp{
+        width: 40%;
+    }
+
+    .row{
+        width: 100%;
+    }
+
+    .profile{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .pfp{
+        width: 60%;
+    }
+
+    .row{
+        width: 100%;
+
+    }
+
+    .profile{
+        width: 100vw;
+    }
+} */
+
+
