@@ -53,6 +53,17 @@
                         click here
                     </a>
                 </div>
+                <span class="vline"></span>
+                <div style="margin-left: 5%;">
+                CHOOSE MODE:
+                </div>
+                <div id="light" style="border: .6px solid; font-size: 14pt; margin-left: 10%;">
+                    Light Mode 
+                </div>
+
+                <div id="dark" style="border: .6px solid; font-size: 14pt; margin-left: 10.5%;">
+                    USC Mode
+                </div>
             </div>
         </div>
         <div class="carousel">
@@ -134,7 +145,21 @@
     <script>
         document.getElementById("logo").addEventListener("click", () => {
             window.location = "home.html"
-        })
+        });
+
+document.querySelector("#dark").addEventListener("click", function(){
+document.body.style.backgroundColor= "crimson";
+});
+document.querySelector("#dark").addEventListener("click", function(){
+document.body.style.color= "gold";
+});
+document.querySelector("#light").addEventListener("click", function(){
+document.body.style.backgroundColor= "rgb(255,199,104)";
+});
+document.querySelector("#light").addEventListener("click", function(){
+document.body.style.color= "black";
+});
+
     </script>
 </body>
 
